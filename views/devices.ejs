@@ -1,0 +1,71 @@
+<%- include('partials/header.ejs') %>
+  <style>
+    .main-content {
+      margin-left: 250px;
+      padding: 20px;
+    }
+
+    .commands-title {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .button-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .button-section {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
+
+    button {
+      margin: 10px 0;
+      padding: 15px 25px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #007BFF;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+
+  <h1 class="commands-title">دستگاه ها</h1>
+
+  <div class="button-container">
+    <div class="button-section">
+      <img src="images/Pasted image.png" width="128px">
+      <h2>192.168.1.121</h2>
+      <button type="button" onclick="redirectToDevice(1)">انتخاب</button>
+    </div>
+    <div class="button-section">
+      <img src="images/Pasted image.png" width="128px">
+      <h2>192.168.1.15</h2>
+      <button type="button" onclick="redirectToDevice(2)">انتخاب</button>
+    </div>
+    <div class="button-section">
+      <img src="images/Pasted image.png" width="128px">
+      <h2>10.1.1.10</h2>
+      <button type="button" onclick="redirectToDevice(3)">انتخاب</button>
+    </div>
+  </div>
+
+  <script>
+    function redirectToDevice(id) {
+      window.location.href = `/devices/${id}`;
+    }
+  </script>
+  <%- include('partials/sidebar.ejs') %>
+    <%- include('partials/footer.ejs') %>

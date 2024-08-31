@@ -1,0 +1,100 @@
+<%- include('partials/header.ejs') %>
+  <style>
+    .main-content {
+      margin-left: 250px;
+      padding: 20px;
+    }
+
+    .commands-title {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .button-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .button-section {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
+
+    button {
+      margin: 10px 0;
+      padding: 15px 25px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #007BFF;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+
+  <h1 class="commands-title">
+    <%= devIp %> - دستورها
+  </h1>
+
+  <div class="button-container">
+    <div class="button-section">
+      <h2>گرفتن اطلاعات دیسک سیستم</h2>
+      <button onclick="executeCommand(<%= 1 %>)">اجرا</button>
+    </div>
+    <div class="button-section">
+      <h2>گرفتن سریال دیسک ها</h2>
+      <button onclick="executeCommand(<%= 2 %>)">اجرا</button>
+    </div>
+    <div class="button-section">
+      <h2>گرفتن تمام اطلاعات و تنظیمات فایروال سیستم</h2>
+      <button onclick="executeCommand(<%= 3 %>)">اجرا</button>
+    </div>
+    <div class="button-section">
+      <h2>گرفتن تمام پورت های ایجاد شده سیستم</h2>
+      <button onclick="executeCommand(<%= 4 %>)">اجرا</button>
+    </div>
+    <div class="button-section">
+      <h2>گرفتن پورت های باز و در حال شنود سیستم</h2>
+      <button onclick="executeCommand(<%= 5 %>)">اجرا</button>
+    </div>
+    <div class="button-section">
+      <h2>گرفتن اطلاعات کاربرهای سیستم</h2>
+      <button onclick="executeCommand(<%= 6 %>)">اجرا</button>
+    </div>
+    <div class="button-section">
+      <h2>گرفتن تمام اطلاعات سیستم</h2>
+      <button onclick="executeCommand(<%= 7 %>)">اجرا</button>
+    </div>
+    <div class="button-section">
+      <h2>نمایش فایل های کاربر</h2>
+      <button onclick="executeCommand(<%= 8 %>)">اجرا</button>
+    </div>
+    <div class="button-section">
+      <h2>نمایش فایل های کل سیستم</h2>
+      <button onclick="executeCommand(<%= 9 %>)">اجرا</button>
+    </div>
+    <div class="button-section">
+      <h2>نمایش صفحه نمایش</h2>
+      <button onclick="executeCommand(<%= 10 %>)">اجرا</button>
+    </div>
+
+  </div>
+
+  <script>
+    const commands = ['گرفتن اطلاعات دیسک سیستم', 'گرفتن سریال دیسک ها', 'گرفتن تمام اطلاعات و تنظیمات فایروال سیستم', 'گرفتن تمام پورت های ایجاد شده سیستم', 'گرفتن پورت های باز و در حال شنود سیستم', 'گرفتن اطلاعات کاربرهای سیستم', 'گرفتن تمام اطلاعات سیستم', 'نمایش فایل های کاربر', 'نمایش فایل های کل سیستم', 'نمایش صفحه نمایش']
+    function executeCommand(commandId) {
+      alert(commandId + ": " + commands[commandId - 1])
+    }
+  </script>
+  <%- include('partials/sidebar.ejs') %>
+    <%- include('partials/footer.ejs') %>

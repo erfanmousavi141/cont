@@ -1,0 +1,67 @@
+<div class="sidebar">
+  <div class="sidebar-header">
+    <h2>داشبورد</h2>
+  </div>
+  <ul class="sidebar-menu">
+    <li><a href="/commands"><i class="fas fa-chart-line"></i> آنالیز داده ها</a></li>
+    <li><a href="#"><i class="fas fa-broadcast-tower"></i> Broadcast</a></li>
+    <li><a href="#"><i class="fas fa-building"></i> Organizations</a></li>
+    <li><a href="#"><i class="fas fa-users"></i> کارمندان</a></li>
+    <li><a href="#"><i class="fas fa-cogs"></i> Add-ons</a></li>
+    <li><a href="#"><i class="fas fa-calendar-alt"></i> برنامه ریزی ها</a></li>
+    <li><a href="#"><i class="fas fa-comments"></i> چت ها</a></li>
+  </ul>
+</div>
+
+<style>
+  .sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #343a40;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar-header {
+    padding: 20px;
+    background: #212529;
+  }
+
+  .sidebar-header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sidebar-menu li {
+    width: 100%;
+  }
+
+  .sidebar-menu li a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background 0.3s;
+  }
+
+  .sidebar-menu li a:hover {
+    background: #495057;
+  }
+
+  .sidebar-menu li a i {
+    margin-right: 15px;
+  }
+</style>
